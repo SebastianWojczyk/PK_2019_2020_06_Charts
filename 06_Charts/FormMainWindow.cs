@@ -17,28 +17,39 @@ namespace _06_Charts
         {
             InitializeComponent();
 
-            Series s = new Series();
-            s.Name = "My function";
-
-            s.ChartType = SeriesChartType.Line;
-
-            for (double x = -10; x <= 10; x += 0.1)
-            {
-                s.Points.AddXY(x, x * x);
-            }
-
-            chart.Series.Add(s);
+            buttonAdd_Click(null, null);
+            FunctionChanged();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             UserControlPolynomial newPolynomial = new UserControlPolynomial();
             flowLayoutPanelControls.Controls.Add(newPolynomial);
+
+            newPolynomial.FunctionChanged += FunctionChanged;
+            FunctionChanged();
         }
 
-        private void userControlPolynomial1_FunctionChanged()
+        private void FunctionChanged()
         {
+            chart.Series.Clear();
+            int i = 1;
+            foreach (IFunction f in flowLayoutPanelControls.Controls)
+            {
+                Series s = new Series();
 
+                s.Name = i.ToString() + ". " + f.FunctionName;
+                i++;
+
+                s.ChartType = SeriesChartType.Line;
+
+                for (double x = -10; x <= 10; x += 0.1)
+                {
+                    s.Points.AddXY(x, f.Value(x));
+                }
+
+                chart.Series.Add(s);
+            }
         }
     }
 }

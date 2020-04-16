@@ -34,10 +34,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.flowLayoutPanelControls = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControlPolynomial1 = new _06_Charts.UserControlPolynomial();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanelControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart
@@ -84,20 +82,11 @@
             // 
             // flowLayoutPanelControls
             // 
-            this.flowLayoutPanelControls.Controls.Add(this.userControlPolynomial1);
             this.flowLayoutPanelControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelControls.Location = new System.Drawing.Point(507, 28);
             this.flowLayoutPanelControls.Name = "flowLayoutPanelControls";
             this.flowLayoutPanelControls.Size = new System.Drawing.Size(144, 534);
             this.flowLayoutPanelControls.TabIndex = 2;
-            // 
-            // userControlPolynomial1
-            // 
-            this.userControlPolynomial1.Location = new System.Drawing.Point(3, 3);
-            this.userControlPolynomial1.Name = "userControlPolynomial1";
-            this.userControlPolynomial1.Size = new System.Drawing.Size(135, 78);
-            this.userControlPolynomial1.TabIndex = 0;
-            this.userControlPolynomial1.FunctionChanged += new _06_Charts.emptyFunction(this.userControlPolynomial1_FunctionChanged);
             // 
             // FormMainWindow
             // 
@@ -109,7 +98,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanelControls.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -120,7 +108,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelControls;
-        private UserControlPolynomial userControlPolynomial1;
     }
 }
 
