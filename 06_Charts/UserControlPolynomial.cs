@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace _06_Charts
 {
-    public partial class UserControlPolynomial : UserControl,IFunction
+    public partial class UserControlPolynomial : UserControl, IFunction
     {
         public UserControlPolynomial()
         {
@@ -22,7 +22,7 @@ namespace _06_Charts
         {
             get
             {
-                return string.Format("f(x) = {0}*x^2 + {1}", numericUpDownA.Value, numericUpDownB.Value);
+                return string.Format("f(x) = {0}*x + {1}", numericUpDownA.Value, numericUpDownB.Value);
             }
         }
 
@@ -30,13 +30,13 @@ namespace _06_Charts
 
         public double Value(double x)
         {
-            return (double)(numericUpDownA.Value) * x * x + (double)numericUpDownB.Value;
+            return (double)(numericUpDownA.Value) * x + (double)numericUpDownB.Value;
         }
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             groupBox.Text = FunctionName;
-            if(FunctionChanged != null)
+            if (FunctionChanged != null)
             {
                 FunctionChanged();
             }
