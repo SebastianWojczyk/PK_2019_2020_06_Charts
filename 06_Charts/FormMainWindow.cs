@@ -11,9 +11,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace _06_Charts
 {
-    public partial class Form1 : Form
+    public partial class FormMainWindow : Form
     {
-        public Form1()
+        public FormMainWindow()
         {
             InitializeComponent();
 
@@ -28,6 +28,12 @@ namespace _06_Charts
             }
 
             chart.Series.Add(s);
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            UserControlPolynomial newPolynomial = new UserControlPolynomial();
+            flowLayoutPanelControls.Controls.Add(newPolynomial);
         }
     }
 }
