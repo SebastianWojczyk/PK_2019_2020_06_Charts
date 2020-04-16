@@ -82,12 +82,12 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelControls
             // 
             this.flowLayoutPanelControls.Controls.Add(this.userControlPolynomial1);
             this.flowLayoutPanelControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelControls.Location = new System.Drawing.Point(507, 28);
-            this.flowLayoutPanelControls.Name = "flowLayoutPanel1";
+            this.flowLayoutPanelControls.Name = "flowLayoutPanelControls";
             this.flowLayoutPanelControls.Size = new System.Drawing.Size(144, 534);
             this.flowLayoutPanelControls.TabIndex = 2;
             // 
@@ -97,6 +97,7 @@
             this.userControlPolynomial1.Name = "userControlPolynomial1";
             this.userControlPolynomial1.Size = new System.Drawing.Size(135, 78);
             this.userControlPolynomial1.TabIndex = 0;
+            this.userControlPolynomial1.FunctionChanged += new _06_Charts.emptyFunction(this.userControlPolynomial1_FunctionChanged);
             // 
             // FormMainWindow
             // 

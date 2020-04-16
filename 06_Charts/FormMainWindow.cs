@@ -35,5 +35,10 @@ namespace _06_Charts
             UserControlPolynomial newPolynomial = new UserControlPolynomial();
             flowLayoutPanelControls.Controls.Add(newPolynomial);
         }
+
+        private void userControlPolynomial1_FunctionChanged()
+        {
+
+        }
     }
 }
