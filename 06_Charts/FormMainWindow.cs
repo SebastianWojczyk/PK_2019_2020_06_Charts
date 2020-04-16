@@ -17,6 +17,15 @@ namespace _06_Charts
         {
             InitializeComponent();
 
+            chart.ChartAreas.First().AxisX.Crossing = 0.0;
+            chart.ChartAreas.First().AxisY.Crossing = 0.0;
+
+            chart.ChartAreas.First().AxisX.MajorGrid.LineColor = Color.LightGray;
+            chart.ChartAreas.First().AxisY.MajorGrid.LineColor = Color.LightGray;
+
+            chart.ChartAreas.First().AxisX.ArrowStyle = AxisArrowStyle.Triangle;
+            chart.ChartAreas.First().AxisY.ArrowStyle = AxisArrowStyle.Triangle;
+
             buttonAdd_Click(null, null);
             FunctionChanged();
         }
@@ -43,13 +52,14 @@ namespace _06_Charts
 
                 s.ChartType = SeriesChartType.Line;
 
-                for (double x = -10; x <= 10; x += 0.1)
+                for (double x = -9.9; x < 10; x += 0.1)
                 {
                     s.Points.AddXY(x, f.Value(x));
                 }
 
                 chart.Series.Add(s);
             }
+            chart.ChartAreas.First().RecalculateAxesScale();
         }
     }
 }

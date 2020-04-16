@@ -48,7 +48,7 @@
             this.chart.Location = new System.Drawing.Point(3, 3);
             this.chart.Name = "chart";
             this.tableLayoutPanel1.SetRowSpan(this.chart, 2);
-            this.chart.Size = new System.Drawing.Size(498, 559);
+            this.chart.Size = new System.Drawing.Size(820, 572);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
             // 
@@ -64,17 +64,17 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(654, 565);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 578);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Location = new System.Drawing.Point(507, 3);
+            this.buttonAdd.Location = new System.Drawing.Point(829, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(144, 19);
+            this.buttonAdd.Size = new System.Drawing.Size(144, 24);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Dodaj funkcję";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -83,19 +83,19 @@
             // flowLayoutPanelControls
             // 
             this.flowLayoutPanelControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelControls.Location = new System.Drawing.Point(507, 28);
+            this.flowLayoutPanelControls.Location = new System.Drawing.Point(829, 33);
             this.flowLayoutPanelControls.Name = "flowLayoutPanelControls";
-            this.flowLayoutPanelControls.Size = new System.Drawing.Size(144, 534);
+            this.flowLayoutPanelControls.Size = new System.Drawing.Size(144, 542);
             this.flowLayoutPanelControls.TabIndex = 2;
             // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 565);
+            this.ClientSize = new System.Drawing.Size(976, 578);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormMainWindow";
-            this.Text = "Form1";
+            this.Text = "Wykresy funkcji";
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
